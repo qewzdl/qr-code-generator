@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "fs-extra": "^11.3.4",
     "inquirer": "^13.4.1",
     "qr-image": "^3.2.0"
   }
