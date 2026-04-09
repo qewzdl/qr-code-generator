@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to QR-code Converter</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="page-title">Convert URL to QR-code</h1>
+    </header>
+
+    <main>
+        <div class="url-input">
+            <div class="url-input__container">
+                <label class="url-input__label" for="user-url">Paste text here</label>
+                <input class="url-input__field" id="url-input-field" type="text" name="user-url">
+            </div>
+            <div class="url-input__button" id="generate-qr-button">Generate</div>
+        </div>
+
+        <div class="qr-container" id="qr-container">
+            <div class="qr-image__button" id="qr-image-download"></div>
+        </div>
+
+        <div class="qr-buttons">
+            <div class="qr-button" id="copy-qr-button">Copy SVG</div>
+            <a class="qr-button" id="dwnl-qr-button">Download SVG</a>
+
+            <div class="message" id="message"></div>
+        </div>
+    </main>
+
+    <footer>
+        <a class="github-link" href="https://github.com/qewzdl/qr-code-generator">
+            <div class="github-link__text">Github Project</div>
+            <div class="github-link__logo">
+                <img src="./assets/images/github-logo.png" alt="Github logo">
+            </div>
+        </a>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
