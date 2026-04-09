@@ -18,7 +18,6 @@ if (document.readyState === 'loading') {
 
 function init() {
     generateQrButton.addEventListener('click', () => {
-        console.log(urlInput);
         generateQr(urlInput.value);
     });
 
