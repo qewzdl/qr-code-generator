@@ -93,6 +93,5 @@ function downloadQrSvg() {
 }
 
 function showMessage(message) {
-    messageElement.classList.add('active');
     messageElement.innerText = message;
 }
