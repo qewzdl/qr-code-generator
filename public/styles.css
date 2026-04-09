@@ -7,6 +7,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-inline: 8px;
 }
 
 header {
@@ -60,7 +62,7 @@ footer {
     background-color: var(--color-primary);
     color: #ffffff;
     padding: 6px 12px;
-    height: 22px;
+    height: 33.6px;
     user-select: none;
     cursor: pointer;
     display: flex;
@@ -160,3 +162,32 @@ body.ready .qr-button:hover {
     font-size: 14px;
 }
 
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 24px;
+    }
+
+    .url-input {
+        width: 300px;
+    }
+}
+
+@media (max-width: 360px) {
+    .page-title {
+        font-size: 20px;
+    }
+
+    .url-input {
+        flex-direction: column;
+    }
+
+    .url-input__button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .url-input {
+        width: 100%;
+    }
+}
