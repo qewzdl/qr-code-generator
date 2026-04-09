@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3000';
+const baseUrl = '';
 
 const body = document.body;
 const urlInput = document.getElementById('url-input-field');
@@ -33,7 +33,7 @@ function init() {
 
 async function generateQr(url) {
     try {
-        response = await fetch(baseUrl + '/generate', {
+        const response = await fetch(baseUrl + '/generate', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
