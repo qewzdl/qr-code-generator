@@ -8,7 +8,7 @@ import qr from 'qr-image';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 function logger(req, res, next) {
     let message = '[' + req.method + '] ' + req.url;
@@ -19,7 +19,6 @@ function logger(req, res, next) {
 }
 
 app.use(express.json());
-app.use(express.raw({ inflate: true, limit: '100kb', type: 'application/json' }));
 app.use(logger);
 
 app.use(express.static('public'));
