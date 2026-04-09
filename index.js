@@ -30,10 +30,14 @@ app.get('/', (req, res) => {
 app.post('/generate', (req, res) => {
     let url = req.body.userUrl;
 
+    if (!url) {
+        return res.status(400).send('URL is required.');
+    }
+
     var qr_svg = qr.imageSync(url, { type: 'svg' });
     res.send(qr_svg);
 })
 
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+    console.log(`Server is running on port ${port}.`);
 });
