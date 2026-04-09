@@ -17,6 +17,12 @@ if (document.readyState === 'loading') {
 }
 
 function init() {
+    document.addEventListener('keydown', (e) => {
+        if (e.code !== 'Enter') return;
+
+        generateQr(urlInput.value);
+    });
+
     generateQrButton.addEventListener('click', () => {
         generateQr(urlInput.value);
     });
