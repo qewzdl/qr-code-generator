@@ -1,11 +1,23 @@
-# QR-Code generator
+# QR-Code Generator
 
 Simple QR-code generator using Node.js and Express.
 
-## Istallation
+## Installation
+
+Install dependencies:
 
 ```bash
 npm install
-npm start
 ```
 
+Create a .env file in the root folder and specify the port:
+
+```env
+PORT=3000
+```
+
+Start the project:
+
+```bash
+npm start
+```
